@@ -1,7 +1,8 @@
 [package]
 name = "universal"
-decription = "Reserved for the universal:// project!"
+description = "Reserved for the universal:// project!"
 authors = ["Brendan Lucas <brendan@mail.renderlabs.cloud>"]
+repository = "https://github.com/renderlabs-cloud/universal.git"
 license = "MIT"
 readme = "README.md"
 version = "0.0.0"
