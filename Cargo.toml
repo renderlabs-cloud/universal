@@ -1,0 +1,10 @@
+[package]
+name = "universal"
+decription = "Reserved for the universal:// project!"
+authors = ["Brendan Lucas <brendan@mail.renderlabs.cloud>"]
+license = "MIT"
+readme = "README.md"
+version = "0.0.0"
+edition = "2024"
+
+[dependencies]
