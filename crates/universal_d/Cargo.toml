@@ -1,0 +1,39 @@
+[package]
+name = 'universal_d'
+version = '0.1.0'
+edition = '2024'
+
+[dependencies]
+universal = { path = '../../', default-features = false }
+
+map-macro = '0.3.0'
+
+serde = { version = '^1', features = ['derive'] }
+postcard = '^1'
+thiserror = '2.0.18'
+
+getset = "0.1.7"
+either = "1.16.0"
+
+# ipc-channel = '0.22.0'
+
+# daemon
+interprocess = { version = '2.4.2', optional = true }
+
+
+[features]
+default = ['daemon']
+
+daemon = [
+	'dep:interprocess'
+]
+
+[lints.clippy]
+pedantic = { level = 'allow', priority = -1 }
+
+# Force use_self to win over any group settings
+use_self = 'warn'
+needless_return = 'allow'
+unused_unit = 'allow'
+# implicit_return = 'warn'
+redundant_field_names = 'allow'

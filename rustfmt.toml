@@ -1,0 +1,45 @@
+# My Rust style config.
+
+unstable_features = true
+
+## Indents
+hard_tabs = true
+tab_spaces = 4
+indent_style = "Block"
+
+## Semantics
+trailing_semicolon = true
+trailing_comma = "Vertical"
+
+## Everything else
+match_block_trailing_comma = true
+match_arm_leading_pipes = "Never" # IDK.
+
+reorder_impl_items = true
+
+space_after_colon = true
+space_before_colon = false
+spaces_around_ranges = true
+
+imports_indent = "Block"
+imports_layout = "Vertical"
+imports_granularity = "Crate"
+group_imports = "Preserve"
+reorder_imports = false
+
+control_brace_style = "AlwaysSameLine"
+force_multiline_blocks = true
+struct_lit_single_line = false
+
+
+format_macro_bodies = true
+
+hex_literal_case = "Upper"
+
+condense_wildcard_suffixes = true
+
+empty_item_single_line = false
+
+use_field_init_shorthand = false
+
+type_punctuation_density = "Wide"

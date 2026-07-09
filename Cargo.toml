@@ -1,11 +1,54 @@
 [package]
-name = "universal"
-description = "Reserved for the universal:// project!"
-authors = ["Brendan Lucas <brendan@mail.renderlabs.cloud>"]
-repository = "https://github.com/renderlabs-cloud/universal.git"
-license = "MIT"
-readme = "README.md"
-version = "0.0.0"
-edition = "2024"
+name = 'universal'
+description = 'Reserved for the universal:// project!'
+authors = ['Brendan Lucas <brendan@mail.renderlabs.cloud>']
+repository = 'https://github.com/renderlabs-cloud/universal.git'
+license = 'MIT'
+readme = 'README.md'
+version = '0.0.0'
+edition = '2024'
+
+# [features]
+# default = ['daemon']
+
+# daemon = [
+#	'dep:universal_d'
+#]
+
+[workspace]
+members = [
+	'crates/*'
+]
 
 [dependencies]
+cxx = '^1'
+map-macro = '0.3.0'
+
+prse = { version = '1.2.1', features = [ 'alloc' ] }
+serde_json = '^1'
+
+serde = { version = '^1', features = [ 'derive' ] }
+serde-binary = '0.5.0'
+postcard = { version = '^1', features = [ 'alloc' ] }
+
+read-only = '^0.1'
+thiserror = '2.0.18'
+getset = "0.1.7"
+try-clone = "0.2.0"
+
+# sysuri = '0.4.0'
+
+# ipc-channel = { version = '0.22.0', optional = true }
+
+[lints.clippy]
+pedantic = { level = 'allow', priority = -1 }
+
+# Force use_self to win over any group settings
+use_self = 'warn'
+needless_return = 'allow'
+unused_unit = 'allow'
+# implicit_return = 'warn'
+redundant_field_names = 'allow'
+
+
+# TODO: Use `dylint` to force `-> ()`.
